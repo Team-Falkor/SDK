@@ -1,13 +1,12 @@
 import {
-  SearchQuery,
+  ProviderInfoResponse,
   ProviderPagination,
   ProviderSearchResponse,
-  ProviderID,
-  ProviderInfoResponse,
-  ProviderSourceRequest,
-  ProviderSourceResponse,
   ProviderServerRequest,
   ProviderServerResponse,
+  ProviderSourceRequest,
+  ProviderSourceResponse,
+  SearchQuery,
 } from "../../@types";
 import { BasePlugin } from "../basePlugin";
 
@@ -23,15 +22,19 @@ export abstract class BaseProvider extends BasePlugin {
 
   /**
    * Fetches information about the given provider item.
-   * @param id The ID of the item to fetch information for.
+   * @param name The name of the item to fetch information for.
    * @returns A promise that resolves to an array of provider information responses.
+   *
+   * some mapping might be needed to get from title -> correct item from site
    */
-  abstract info(id: ProviderID): Promise<Array<ProviderInfoResponse>>;
+  abstract info(name: string): Promise<Array<ProviderInfoResponse>>;
 
   /**
    * Fetches sources for the given item.
    * @param request The request to use when fetching sources.
-   * @returns A promise that resolves to an array of provider source responses.
+   * @returns A promise that resolves to an array of provider source responses
+   * .
+   * some mapping might be needed to get from title -> correct item from site
    */
   abstract sources(
     request: ProviderSourceRequest

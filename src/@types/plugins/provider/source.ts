@@ -4,6 +4,7 @@ import type { ProviderID } from "./types";
 export type ProviderSourceRequest = {
   item_id?: ProviderID;
   game_id: string;
+  game_name: string;
 };
 
 export type ProviderSourceResponse = {

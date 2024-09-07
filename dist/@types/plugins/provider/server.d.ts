@@ -13,6 +13,7 @@ export type ProviderServerLink = {
 };
 export type ProviderServerRequest = {
     item_id: string;
+    game_name: string;
     game_id?: string;
     source_id?: string;
     server_id?: string;
