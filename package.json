@@ -1,11 +1,14 @@
 {
-  "name": "@falkor/sdk",
+  "name": "@team-falkor/sdk",
   "version": "0.1.2",
+  "description": "SDK for Falkor Plugins",
   "module": "./src/index.ts",
   "type": "module",
-  "description": "SDK for Falkor Plugins",
   "license": "MIT",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.js",
   "scripts": {
@@ -18,5 +21,12 @@
   "peerDependencies": {
     "@tauri-apps/plugin-http": "^2.0.0-rc.2",
     "react": "^18.3.1"
-  }
+  },
+  "dependencies": {
+    "csstype": "^3.1.3",
+    "js-tokens": "^4.0.0",
+    "loose-envify": "^1.4.0",
+    "react": "^18.3.1"
+  },
+  "author": ""
 }
