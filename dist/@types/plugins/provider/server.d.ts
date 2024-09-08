@@ -8,8 +8,10 @@ export type ProviderServerResponse = {
     headers?: Record<string, string>;
 };
 export type ProviderServerLink = {
+    id: string;
     url: string;
     type: "ddl" | "torrent" | "magnet";
+    headers?: Record<string, string>;
 };
 export type ProviderServerRequest = {
     item_id: string;

@@ -1,4 +1,4 @@
-import { ProviderInfoResponse, ProviderPagination, ProviderSearchResponse, ProviderServerRequest, ProviderServerResponse, ProviderSourceRequest, ProviderSourceResponse, SearchQuery } from "../../@types";
+import { ProviderInfoResponse, ProviderPagination, ProviderSearchResponse, ProviderSourceRequest, ProviderSourceResponse, SearchQuery } from "../../@types";
 import { BasePlugin } from "../basePlugin";
 export declare abstract class BaseProvider extends BasePlugin {
     /**
@@ -23,11 +23,5 @@ export declare abstract class BaseProvider extends BasePlugin {
      * some mapping might be needed to get from title -> correct item from site
      */
     abstract sources(request: ProviderSourceRequest): Promise<Array<ProviderSourceResponse>>;
-    /**
-     * Fetches servers for the given item.
-     * @param request The request to use when fetching servers.
-     * @returns A promise that resolves to an array of provider server responses.
-     */
-    abstract servers(request: ProviderServerRequest): Promise<Array<ProviderServerResponse>>;
 }
 //# sourceMappingURL=index.d.ts.map
