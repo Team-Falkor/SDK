@@ -1,4 +1,4 @@
-import { ProviderServer } from "./server";
+import { ProviderServerLink } from "./server";
 import type { ProviderID } from "./types";
 
 export type ProviderSourceRequest = {
@@ -11,5 +11,5 @@ export type ProviderSourceResponse = {
   id: string;
   name: string;
   description?: string;
-  servers: Array<ProviderServer>;
+  sources: Array<ProviderServerLink>;
 };

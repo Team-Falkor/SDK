@@ -2,8 +2,6 @@ import {
   ProviderInfoResponse,
   ProviderPagination,
   ProviderSearchResponse,
-  ProviderServerRequest,
-  ProviderServerResponse,
   ProviderSourceRequest,
   ProviderSourceResponse,
   SearchQuery,
@@ -39,13 +37,4 @@ export abstract class BaseProvider extends BasePlugin {
   abstract sources(
     request: ProviderSourceRequest
   ): Promise<Array<ProviderSourceResponse>>;
-
-  /**
-   * Fetches servers for the given item.
-   * @param request The request to use when fetching servers.
-   * @returns A promise that resolves to an array of provider server responses.
-   */
-  abstract servers(
-    request: ProviderServerRequest
-  ): Promise<Array<ProviderServerResponse>>;
 }
