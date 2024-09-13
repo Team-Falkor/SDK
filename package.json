@@ -1,6 +1,6 @@
 {
   "name": "@team-falkor/sdk",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "SDK for Falkor Plugins",
   "module": "./src/index.ts",
   "type": "module",
