@@ -4,6 +4,7 @@ exports.BasePlugin = void 0;
 // Define the context interface for dependencies
 class BasePlugin {
     constructor(context) {
+        this.context = null;
         this.context = context;
     }
 }

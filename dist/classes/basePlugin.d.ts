@@ -1,6 +1,6 @@
 import { PluginContext, PluginMetadata } from "../@types";
 export declare abstract class BasePlugin {
-    protected context: PluginContext;
+    protected context: PluginContext | null;
     abstract readonly metadata: PluginMetadata;
     constructor(context: PluginContext);
     /**
