@@ -3,7 +3,7 @@ import { PluginContext, PluginMetadata } from "../@types";
 // Define the context interface for dependencies
 
 export abstract class BasePlugin {
-  protected context: PluginContext;
+  protected context: PluginContext | null = null;
 
   // Metadata for the plugin
   abstract readonly metadata: PluginMetadata;
