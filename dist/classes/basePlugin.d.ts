@@ -1,6 +1,8 @@
-import { PluginMetadata } from "../@types";
+import { PluginContext, PluginMetadata } from "../@types";
 export declare abstract class BasePlugin {
+    protected context: PluginContext;
     abstract readonly metadata: PluginMetadata;
+    constructor(context: PluginContext);
     /**
      * This method is responsible for initializing the plugin.
      * It is called when the plugin is registered with the plugin manager.
