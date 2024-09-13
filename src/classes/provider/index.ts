@@ -1,4 +1,5 @@
 import {
+  PluginContext,
   ProviderInfoResponse,
   ProviderPagination,
   ProviderSearchResponse,
@@ -9,6 +10,10 @@ import {
 import { BasePlugin } from "../basePlugin";
 
 export abstract class BaseProvider extends BasePlugin {
+  setContext(context: PluginContext) {
+    this.context = context;
+  }
+
   /**
    * Searches the provider for results matching the given query.
    * @param query The search query to use.

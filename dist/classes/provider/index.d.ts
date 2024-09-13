@@ -1,6 +1,7 @@
-import { ProviderInfoResponse, ProviderPagination, ProviderSearchResponse, ProviderSourceRequest, ProviderSourceResponse, SearchQuery } from "../../@types";
+import { PluginContext, ProviderInfoResponse, ProviderPagination, ProviderSearchResponse, ProviderSourceRequest, ProviderSourceResponse, SearchQuery } from "../../@types";
 import { BasePlugin } from "../basePlugin";
 export declare abstract class BaseProvider extends BasePlugin {
+    setContext(context: PluginContext): void;
     /**
      * Searches the provider for results matching the given query.
      * @param query The search query to use.
