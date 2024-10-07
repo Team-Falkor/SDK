@@ -1,4 +1,3 @@
-import { fetch } from "@tauri-apps/plugin-http";
 import * as cheerio from "cheerio";
 import { toast } from "sonner";
 
